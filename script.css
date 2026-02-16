@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff6ec4, #7873f5, #42e695);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+/* Animated Background */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Floating Shapes */
+.bg-shape {
+    position: fixed;
+    border-radius: 50%;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.shape1 {
+    width: 200px;
+    height: 200px;
+    background: #ffffff;
+    top: -50px;
+    left: -50px;
+}
+
+.shape2 {
+    width: 150px;
+    height: 150px;
+    background: #ffdd59;
+    bottom: 50px;
+    right: -40px;
+}
+
+.shape3 {
+    width: 120px;
+    height: 120px;
+    background: #00f2fe;
+    top: 60%;
+    left: -30px;
+}
+
+/* App Container */
+.app-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 420px;
+    min-height: 100vh;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    border-radius: 25px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-circle {
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    color: white;
+    font-size: 24px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.brand {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    margin: 0;
+    font-size: 13px;
+    color: #555;
+}
+
+/* Banner Image */
+.banner img {
+    width: 100%;
+    border-radius: 15px;
+    margin: 15px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Card */
+.card {
+    background: #f8fbff;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(135deg, #42e695, #3bb2b8);
+    color: white;
+    transition: 0.3s;
+}
+
+#content button::before {
+    content: "📘 ";
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+#backBtn {
+    background: linear-gradient(135deg, #ff512f, #f09819);
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.footer-logo {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.socials a {
+    margin: 0 10px;
+    font-size: 20px;
+    color: #dd2476;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: #42e695;
+}
+
+copyright {
+    font-size: 12px;
+}
